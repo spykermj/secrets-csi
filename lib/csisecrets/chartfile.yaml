@@ -1,0 +1,14 @@
+directory: charts
+repositories:
+- name: stable
+  url: https://charts.helm.sh/stable
+- name: hashicorp
+  url: https://helm.releases.hashicorp.com
+- name: secretcsi
+  url: https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts
+requires:
+- chart: hashicorp/vault
+  version: 0.21.0
+- chart: secretcsi/secrets-store-csi-driver
+  version: 1.2.3
+version: 1
