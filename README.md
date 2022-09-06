@@ -12,7 +12,7 @@ Not covered yet.
 ## Set Up Vault
 
 ~~~
-kubectl exec -it vault-0 -- /bin/sh
+kubectl -n csi-system exec -it vault-0 -- /bin/sh
 vault kv put secret/db-pass password="db-secret-password"
 vault kv get secret/db-pass
 vault auth enable kubernetes
